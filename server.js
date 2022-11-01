@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
+const cors = require('cors')
 const todoRouter = require('./Routes/todo');
 
 const dotenv = require('dotenv');
@@ -9,7 +10,7 @@ const port = process.env.PORT || 8000;
 
 
 
-
+app.use(cors())
 app.use(express.json());
 
 
